@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        </style>
+        </head>
+<title>WebMovie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+  
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
+  <script type="text/javascript">
+    function generateBarCode()
+    {
+        var nric = "thanh";
+        var url = 'https://api.qrserver.com/v1/create-qr-code/?data='+ nric + '&amp;size=100x100';
+        $('#barcode').attr('src', url);
+    }
+  </script>
+
+    
+
+
+
+<div class="w3-row w3-padding w3-theme-d2 w3-xlarge">
+  <div class="w3-quarter">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-bars"></i></a>
+    </div>
+  </div>
+  <div class="w3-half">
+    <input type="text" class="w3-amber w3-border-0 w3-padding" style="width:100%">
+  </div>
+  <div class="w3-quarter">
+    <div class="w3-bar w3-xlarge">
+      <a href="#" class="w3-bar-item w3-button w3-left"><i class="fa fa-search"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-right"><img class="w3-hide-small w3-circle" src="https://milan.greeters.info/wp-content/themes/greeters/images/no_avatar.png" style="height:40px;"></a>
+    </div>
+
+  </div>
+</div>
+<div class="w3-container w3-padding-32 w3-theme-d1">
+  <h1>Movie Store</h1>
+</div>
+<div class="w3-row-padding w3-theme">
+<div class="w3-third w3-section">
+<div class="w3-card-4">
+<img src="https://api.androidhive.info/barcodes/wonderwoman.jpg" style="width:100%">
+<div class="w3-container w3-white">
+
+<h4><b>Wonder Woman</b></h4>
+<p>Wonder Woman: Nữ Thần Chiến Binh, Wonder Woman (2017).
+<br>Phim Wonder Woman: Nữ Thần Chiến Binh: Trước khi trở thành Wonder Woman, Diana (Gal Gadot) là công chúa chiến binh Amazon của hòn đảo Themyscira. Khi chàng phi công Steve Trevor (Chris Pine) trôi dạt vào đảo và kể về cuộc đại chiến đang diễn ra tại thế giới bên ngoài, Diana quyết định rời khỏi quê nhà để giải cứu nhân loại. Từ đó cô...</p>
+
+<!--<img id='barcode' 
+src="https://api.qrserver.com/v1/create-qr-code/?data=Wonder Woman&amp;size=300x300" 
+alt="" 
+title="HELLO" 
+width="150" 
+height="150" />-->
+<form action="/showqr">
+  <input class="w3-button w3-teal" type="submit" value=" Buy Now " />
+</form>
+</div>
+</div>
+</div>
+<div class="w3-third w3-section">
+<div class="w3-card-4">
+<img src="https://api.androidhive.info/barcodes/dunkirk.jpg" style="width:100%">
+<div class="w3-container w3-white">
+<h4><b>Dunkirk</b></h4>
+<p>Cuộc Di Tản Dunkirk: Dunkirk 2017 .
+<br> Dunkirk là một bộ phim chiến tranh do Mỹ sản xuất được ra mắt năm 2017 xoay quanh câu chuyện về cuộc giải cứu quân Đồng Minh tại Dunkirk khỏi chiến dịch xóa sổ của phát xít Đức. Trong phim các bạn sẻ thấy cảnh ngàn cân treo sọi tóc mà những người lính này phải trải qua để nhầm bảo toàn tánh mạng của mình, họ phải tận dụng tất cả mọi thứ có thể di chuyển trên họ phải tận dụng tất cả mọi thứ có thể di chuyển trên... </p>
+
+<!--<img id='barcode' 
+src="https://api.qrserver.com/v1/create-qr-code/?data=moviestort@aTsBKBKnkm970KjoarvX2g==&amp;size=300x300" 
+alt="" 
+title="HELLO" 
+width="150" 
+height="150" />-->
+<form action="/showqr">
+  <input class="w3-button w3-teal" type="submit" value=" Buy Now " />
+</form>
+</div>
+</div>
+</div>
+<div class="w3-third w3-section">
+<div class="w3-card-4">
+<img name="image1" src="https://api.androidhive.info/barcodes/spiderman.jpg" style="width:100%">
+<div class="w3-container w3-white">
+<h4><b>Spider-Man Homecoming</b></h4>
+<p>Người Nhện: Trở Về Nhà - Spider-Man: Homecoming (2017).
+<br>Sau cuộc “Nội chiến siêu anh hùng” trong Captain America: Civil War, Peter Parker (Tom Holland) cởi bỏ thân phận Người Nhện, tiếp tục với cuộc sống học đường thường nhật. Lúc này, tỉ phú Tony Stark (Robert Downey Jr.), đồng thời cũng là người thầy siêu anh hùng của Peter vẫn cho phép cậu sử dụng danh tính Người Nhện để hành hiệp trượng ...
+
+<!--<img id='barcode' 
+src="https://api.qrserver.com/v1/create-qr-code/?data=Spider-Man Homecoming&amp;size=300x300" 
+alt="" 
+title="HELLO" 
+width="150" 
+height="150" />-->
+<form action="/showqr">
+  <input class="w3-button w3-teal" type="submit" value=" Buy Now " />
+</form>
+</div>
+</div>
+<br><br><br>
+</div>
+</div>
+<div class="w3-container w3-theme-d4">
+</div>
+</body>
+
+
+</html>

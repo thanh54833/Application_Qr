@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Testing QR code</title>
+
+        <script type="text/javascript">
+            function generateBarCode()
+            {
+                var nric = "thanh";
+                var url = 'https://api.qrserver.com/v1/create-qr-code/?data='+ nric + '&amp;size=100x100';
+                $('#barcode').attr('src', url);
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <img id='barcode' 
+            src="https://api.qrserver.com/v1/create-qr-code/?data=1&amp;size=300x300" 
+            alt="" 
+            title="HELLO" 
+            width="150" 
+            height="150" />
+    </body>
+
+</html>
